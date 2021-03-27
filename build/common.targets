@@ -7,7 +7,7 @@
     <LangVersion>latest</LangVersion>
     <AssemblySearchPaths>$(AssemblySearchPaths);{GAC}</AssemblySearchPaths>
 
-    <!--<DefineConstants>$(DefineConstants);SMAPI_FOR_WINDOWS_64BIT_HACK</DefineConstants>-->
+    <DefineConstants>$(DefineConstants);SMAPI_FOR_WINDOWS_64BIT_HACK</DefineConstants>
     <DefineConstants Condition="$(OS) == 'Windows_NT'">$(DefineConstants);SMAPI_FOR_WINDOWS</DefineConstants>
     <DefineConstants Condition="$(OS) == 'Windows_NT' AND !$(DefineConstants.Contains(SMAPI_FOR_WINDOWS_64BIT_HACK))">$(DefineConstants);SMAPI_FOR_XNA</DefineConstants>
   </PropertyGroup>
